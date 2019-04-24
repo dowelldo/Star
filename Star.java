@@ -99,11 +99,39 @@ public class Star {
 	 *
 	 * Prints the middle two points of the star.  This is an 
 	 * upside down quadrilateral.
+	 *
+	 * printMiddle(5);
+	 * *******************
+	 *  *****************
+	 *   ***************
+	 *    *************
+	 *     ***********
 	 * 
 	 * @param size is the size of the shape to print
 	 */
 	public static void printMiddle(int size) {
-		return;
+		// Sets the offset for the shape.  This value will
+		// increment by 1 after each loop iteration.
+		int space = 1;
+		
+		// Sets the number of stars to be printed per loop 
+		// iteration.  The shape needs to extend out passed
+		// the ends of the top point by size number of stars,
+		// and the middle needs to be full of stars.  This 
+		// value will decrease by 2 after each iteration.
+		int stars = (size * 4) + 1;
+		int i = 0;
+		int j = 0;
+		for (i = 0; i < size; i++) {
+			// print space number of spaces for the offset
+			for (j = 0; j < space; j++) {System.out.print(" ");}
+
+			// print stars number of asterisks
+			for (j = 0; j < stars; j++) {System.out.print("*");}
+			System.out.println();
+			stars -= 2;
+			space++;
+		}
 	}
 
 	/**
