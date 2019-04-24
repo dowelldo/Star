@@ -13,7 +13,7 @@ public class Star {
 	 * @param args holds the specified size value
 	 */
 	public static void main(String[] args) {
-		int size;
+		int size = 0;
 		// if user fails to use any arguments, print usage
 		try {
 			size = Integer.parseInt(args[0]);
@@ -22,6 +22,51 @@ public class Star {
 			printUsage();
 		}
 		
+		if (size == 0) System.out.println(); // print nothing when size == 0
+		else {
+			// first, print the top point
+			printTop(size);
+
+			// then, print the middle of the star
+			printMiddle(size);
+
+			// finally, print the bottom two points
+			printBottom(size);
+		}
+	}
+
+	/**
+	 * printTop:
+	 * 
+	 * Prints the top point on the star.
+	 *
+	 * @param size is the size of the point to print
+	 */
+	public static void printTop(int size) {
+		return;
+	}
+
+	/**
+	 * printMiddle:
+	 *
+	 * Prints the middle two points of the star.  This is an 
+	 * upside down quadrilateral.
+	 * 
+	 * @param size is the size of the shape to print
+	 */
+	public static void printMiddle(int size) {
+		return;
+	}
+
+	/**
+	 * printBottom:
+	 *
+	 * Prints the bottom two points of the star.
+	 *
+	 * @param size is the size of the shape to print.
+	 */
+	public static void printBottom(int size) {
+		return;
 	}
 
 	/**
