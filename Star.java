@@ -139,10 +139,46 @@ public class Star {
 	 *
 	 * Prints the bottom two points of the star.
 	 *
+	 * printBottom(5);
+	 *     ***** *****
+	 *    ****     ****
+	 *   ***         ***
+	 *  **             **
+	 * *                 *
+	 *
 	 * @param size is the size of the shape to print.
 	 */
 	public static void printBottom(int size) {
-		return;
+		// Sets the offset for the shape
+		int space = size + 1;
+		
+		// Sets the number of stars to print.  This will
+		// print twice as many stars as the value set per
+		// line, one for each point.  This value will 
+		// decrement by one after each loop iteration.
+		int stars = size;
+
+		// Sets the amount of space between each point.
+		int middle = 1;
+		int i = 0;
+		int j = 0;
+		for (i = 0; i < size; i++) {
+			// print the offset in spaces:
+			for (j = 0; j < space; j++) {System.out.print(" ");}
+
+			// Print the first point:
+			for (j = 0; j < stars; j++) {System.out.print("*");}
+
+			// print the space in the middle:
+			for (j = 0; j < middle; j++) {System.out.print(" ");}
+
+			// print the other point:
+			for (j = 0; j < stars; j++) {System.out.print("*");}
+			System.out.println();
+			space--;
+			stars--;
+			middle += 4;
+		}
 	}
 
 	/**
