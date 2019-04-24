@@ -2,6 +2,25 @@
  * This is a simple exersize in Java to print out a star whose size
  * is based on a command line argument.
  *
+ * Example: java Star 5
+ * 
+ *                   *
+ *                  ***
+ *                 *****
+ *                *******
+ *               *********
+ *          *******************
+ *           *****************
+ *            ***************
+ *             *************
+ *              ***********
+ *             ****** ******
+ *            *****     *****
+ *           ****         ****
+ *          ***             ***
+ *         **                 **
+ *        *                     *
+ *
  * @author Owen Dowell
  * @version 1.0
  */
@@ -39,11 +58,40 @@ public class Star {
 	 * printTop:
 	 * 
 	 * Prints the top point on the star.
+	 * 
+	 * printTop(5);
+	 *          *
+	 *         ***
+	 *        *****
+	 *       *******
+	 *      *********
+	 *
 	 *
 	 * @param size is the size of the point to print
 	 */
 	public static void printTop(int size) {
-		return;
+		// Sets the offset for the shape.  +1 is for asthetics.
+		int space = size + 1;
+		
+		// Sets the number of stars to be printed per loop 
+		// iteration to 1.  After the loop iterates, this value
+		// will go up by 2.
+		int stars = 1;
+		int i = 0;
+		int j = 0;
+		for (i = 0; i < size; i++) {
+			// print space number of spaces
+			for (j = 0; j < space; j++) {System.out.print(" ");}
+			
+			// print size - i spaces
+			for (j = 0; j < size - i; j++) {System.out.print(" ");}
+
+			// print stars number of asterisks
+			for (j = 0; j < stars; j++) {System.out.print("*");}
+			System.out.println();
+
+			stars += 2;
+		}
 	}
 
 	/**
